@@ -1,6 +1,5 @@
-import { baseUrl } from "@/app/service/ApiClient";
 import type { NextConfig } from "next";
-const URL = baseUrl;
+const URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 const nextConfig: NextConfig = {
   // Thêm đoạn này vào
   typescript: {
@@ -24,42 +23,7 @@ const nextConfig: NextConfig = {
   // Giữ nguyên cấu hình images của bạn
   images: {
     domains: ["res.cloudinary.com"],
-    remotePatterns: [
-      { protocol: "https", hostname: "i.ibb.co" },
-      { protocol: "https", hostname: "thecrafthouse.vn" },
-      { protocol: "https", hostname: "cdn.shopify.com" },
-      { protocol: "https", hostname: "images.pexels.com" },
-      {
-        protocol: "https",
-        hostname: "lh3.googleusercontent.com",
-        port: "",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn-icons-png.flaticon.com",
-        port: "",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "s.udemycdn.com",
-        port: "",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "han01.vstorage.vngcloud.vn",
-        port: "",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "elearning.iigvietnam.com",
-        port: "",
-        pathname: "/**",
-      },
-    ],
+    remotePatterns: [],
   },
 };
 
