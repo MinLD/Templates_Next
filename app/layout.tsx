@@ -1,7 +1,7 @@
 import MyFooter from "@/app/components/footer";
 import MyHeader from "@/app/components/header";
 import { Inter, Poppins } from "next/font/google";
-
+import "./globals.css";
 // 2. Cấu hình font
 const inter = Inter({
   subsets: ["latin"],
@@ -24,11 +24,7 @@ export default async function RootLayout({
   return (
     <>
       <html lang="vi" className={`${inter.variable} ${poppins.variable}`}>
-        <body>
-          <MyHeader />
-          {children}
-          <MyFooter />
-        </body>
+        <body>{children}</body>
       </html>
     </>
   );
