@@ -1,4 +1,3 @@
-import { GetRoles_Api } from "@/app/service/auth";
 import { NextRequest, NextResponse } from "next/server";
 
 const authPaths = ["/authenticate/loggin", "/authenticate"];
